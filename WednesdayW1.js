@@ -19,6 +19,3 @@ function reorder (str){
    return upperCase+lowerCase+numbers;
   }
   
-  console.log(reorder("hA2p4Py"));
-  console.log(reorder ("m11oveMENT"));
-  console.log(reorder ("s9hOrt4CAKE"));
