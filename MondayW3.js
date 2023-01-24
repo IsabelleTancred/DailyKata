@@ -8,13 +8,11 @@ Throw an appropriate error if an element of the input array is not a number. */
 
 function countBoomerangs(arr) {
   let count = 0;
-  if (arr.length < 3) {
+  if (arr.length < 3 ||(arr.map(isNaN)).includes(true)) {
     return "error";
   }
   for (let i = 0; i < arr.length - 2; i++) {
-    if (isNaN(arr[i])) {
-      return "error";
-    } else if (arr[i] == arr[i + 2] && arr[i] != arr[i + 1]) {
+    if (arr[i] === arr[i + 2] && arr[i] !== arr[i + 1]) {
       count++;
     }
   }
@@ -33,4 +31,4 @@ console.log(countBoomerangs([]));
 
 console.log(countBoomerangs([1, 7]));
 
-console.log(countBoomerangs([1, 7, 1, 7, "one", 7, 1]));
+console.log(countBoomerangs([1, 7, 1, 7, 7, 1, "one"]));
