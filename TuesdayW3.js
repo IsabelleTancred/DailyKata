@@ -1,14 +1,14 @@
 // Create a function which returns how many Friday 13ths there are in a given year
 
 function howUnlucky(year) {
-  let count = 0;
-  for (let i = 0; i < 12; i++) {
-    let j = new Date(year, i, 13);
+  let friday13ths = 0;
+  for (let month = 0; month < 12; month++) {
+    let j = new Date(year, month, 13);
     if (j.getDay() == 5) {
-      count++;
+      friday13ths++;
     }
   }
-  return count;
+  return friday13ths;
 }
 console.log(howUnlucky(2023));
 console.log(howUnlucky(2020));
